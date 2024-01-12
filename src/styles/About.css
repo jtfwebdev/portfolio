@@ -1,0 +1,221 @@
+.aboutSection {
+    height: 85vh;
+    width: 100%;
+    position: relative;
+    padding-top: 15vh;
+    scroll-snap-align: start;
+    background: transparent;
+}
+
+.aboutSection .titleWrap {
+    display: grid;
+    width: fit-content;
+    height: fit-content;
+}
+
+.aboutSection .titleWrap h2, .priorityTitleContainer h2 {
+    font-size: 6rem;
+    color: gray;
+    opacity: 0;
+    text-wrap: nowrap;
+    grid-column: 1;
+    grid-row: 1;
+    display: inline;
+    margin-left: 4vw;
+}
+
+.aboutSection .titleWrap .titleContainer {
+    background-color: black;
+    margin-left: 4vw;
+    z-index: 99;
+    grid-column: 1;
+    grid-row: 1;
+    width: 0;
+}
+
+.aboutTextContainer {
+    margin-left: 4vw;
+    margin-top: 70px;
+}
+
+.aboutSection .textWrap,
+.projectDescription .textWrap,
+.bioText .textWrap {
+    display: grid;
+    width: fit-content;
+    height: fit-content;
+}
+
+.priorityTitleContainer .blockingDiv {
+    margin-left: 4vw;
+}
+
+.aboutSection .textWrap .blockingDiv,
+.projectDescription .textWrap .blockingDiv,
+.bioText .textWrap .blockingDiv {
+    background-color: black;
+    z-index: 99;
+    grid-column: 1;
+    grid-row: 1;
+    width: 0;
+}
+
+.aboutSection .textWrap h2 {
+    font-size: 2rem;
+    color: black;
+    text-wrap: nowrap;
+    grid-column: 1;
+    grid-row: 1;
+    display: inline;
+}
+
+.projectDescription .textWrap h2 {
+    font-size: 1.3rem;
+    color: black;
+    grid-column: 1;
+    grid-row: 1;
+    display: inline;
+}
+
+
+.bioText .textWrap h2 {
+    font-size: 1.3rem;
+    color: black;
+    grid-column: 1;
+    grid-row: 1;
+    display: inline;
+}
+
+.aboutTextContainer .textWrap:not(:first-of-type) {
+    margin-top: 20px;
+}
+
+.priorityTitleContainer .textWrap .priorityFont {
+    font-size: 5rem;
+}
+
+.priorityTitleContainer {
+    margin-top: 10px;
+}
+
+.textWrap h2 {
+    opacity: 0;
+}
+
+#tsparticles1, #tsparticles2, #tsparticles3, #tsparticles4, #tsparticles5 {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#tsparticles1 canvas, #tsparticles2 canvas, #tsparticles3 canvas,
+#tsparticles4 canvas, #tsparticles5 canvas {
+    transition-duration: .5s;
+}
+
+.bio_container {
+    margin-left: 4vw;
+    margin-top: 20px;
+}
+
+.bio_container .textWrap h2 {
+    font-size: 1.2rem;
+    color: grey;
+}
+
+.devIcon_container {
+    margin-left: 4vw;
+    margin-top: 60px;
+    display: flex;
+}
+
+.devIcon_container i {
+    font-size: 50px;
+    margin-right: 10px;
+    position: relative;
+    padding: 15px;
+    border-radius: 50%;
+    transition-duration: .3s;
+}
+
+.devIcon_container i:last-of-type {
+    margin-right: 0;
+}
+
+.devIcon_container i p {
+    position: absolute;
+    bottom: -50%;
+    right: 50%;
+    transform: translateX(50%) translateY(-200%);
+    opacity: 0;
+    font-size: 1.2rem;
+    color: gray;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+.aboutSection h2 {
+    pointer-events: none;
+}
+
+.particleContainer {
+    height: 7vw;
+    width: 7vw;
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    position: absolute;
+    right: 15vw;
+    overflow: hidden;
+}
+
+.titleWrap h2 span {
+    position: relative;
+    margin-right: 2px;
+}
+
+.titleWrap h2 span::after {
+    position: absolute;
+    right: -8px;
+    color: rgb(16, 59, 151);
+    z-index: -1;
+    background-color: rgb(174, 238, 174);
+    background-image: radial-gradient(circle, rgb(152, 235, 152) 0%, rgba(3, 107, 226, 0.984) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.titleWrap h2 span:nth-child(1)::after {
+    content: "J";
+    
+}
+
+.titleWrap h2 span:nth-child(2)::after {
+    content: "O";
+}
+
+.titleWrap h2 span:nth-child(3)::after {
+    content: "S";
+}
+
+.titleWrap h2 span:nth-child(4)::after {
+    content: "H";
+}
+
+.titleWrap h2 span:nth-child(6)::after {
+    content: "F";
+}
+
+.titleWrap h2 span:nth-child(7)::after {
+    content: "O";
+}
+
+.titleWrap h2 span:nth-child(8)::after {
+    content: "R";
+}
+
+.titleWrap h2 span:nth-child(9)::after {
+    content: "D";
+}

@@ -1,0 +1,128 @@
+:root {
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --line-gap: 6px;
+    --close-height: calc(var(--bar-height) * 2 + var(--line-gap));
+}
+
+.projectContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    background: white;
+}
+
+.projectContainer .close_project {
+    --x-width: calc(var(--close-height) * 1.41421356237);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--line-gap);
+    margin-top: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition-duration: .2s;
+    z-index: 999;
+}
+
+.projectContainer .close_project:hover {
+    opacity: 0.6;
+}
+
+.projectContainer .close_project::after, 
+.projectContainer .close_project::before {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: white;
+    outline: none;
+    pointer-events: none;
+    border-radius: 9999px;
+    transform-origin: left center;
+}
+
+.projectContainer .close_project::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+.projectContainer .close_project::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.projectWrap {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.bg_column_1, .bg_column_2 {
+    z-index: 99;
+    width: 15%;
+    height: 100%;
+}
+
+.bg_column_2 {
+    background-image: linear-gradient(105deg,
+        hsl(212deg 77% 67%) 1%,
+        hsl(204deg 79% 66%) 44%,
+        hsl(198deg 76% 67%) 50%,
+        hsl(193deg 69% 70%) 51%,
+        hsl(187deg 60% 74%) 50%,
+        hsl(178deg 51% 79%) 49%,
+        hsl(167deg 53% 86%) 50%,
+        hsl(153deg 57% 92%) 56%,
+        hsl(132deg 100% 98%) 99%);
+}
+
+.bg_column_1 {
+background-image: linear-gradient(255deg,
+            hsl(212deg 77% 67%) 1%,
+            hsl(204deg 79% 66%) 44%,
+            hsl(198deg 76% 67%) 50%,
+            hsl(193deg 69% 70%) 51%,
+            hsl(187deg 60% 74%) 50%,
+            hsl(178deg 51% 79%) 49%,
+            hsl(167deg 53% 86%) 50%,
+            hsl(153deg 57% 92%) 56%,
+            hsl(132deg 100% 98%) 99%);
+}
+
+.projectHero {
+    width: 100%;
+    position: relative;
+    height: 58vh;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.projectWrap a {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projectDescription {
+    padding: 0 2%;
+    width: 96%;
+    height: 42vh;
+    font-size: 1.3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 99;
+}
+
+.projectDescription .textWrap {
+    height: fit-content;
+}

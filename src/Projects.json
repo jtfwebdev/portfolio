@@ -1,0 +1,33 @@
+[
+    {
+        "id": "1",
+        "target": "https://moviereviewblogger.co.uk/",
+        "text": [
+            "My personal take on the obligatory Movie API project.",
+            "This is a full-stack MERN application (mongoDB, Express, React, node.js).",
+            "Users are able to create an account and securely log in, view the Movie of the Week and leave their review for others to see.",
+            "API calls are minimised by use of a scheduled job in the backend, whereby data is fetched only once per day and used to update the movies list.",
+            "Authentication is provided via JSON web tokens, as is a fully-functional password-reset system."
+        ]
+    },
+    {
+        "id": "2",
+        "target": "",
+        "text": [
+            "Conway's Game of Life is a single-player game that studies cellular propagation.",
+            "This project is coded in Typescript and React, and was initialised using Vite.",
+            "The animation is painted onto a canvas and undergoes generational 'ticks'. Second- and third-order loops calculate the binary condition of each cell.",
+            "A certain amount of balancing was required for this application - canvas size, cell population constraints and limits on the tick duration were necessary to ensure reasonable performance in the browser."
+        ]
+    },
+    {
+        "id": "3",
+        "target": "https://mainstcafe.co.uk",
+        "text": [
+            "This website was initially contracted as a single-page website for a newly-opened Cafe in my local area.",
+            "I designed a fully custom Wordpress theme using PHP in a local environment, before handling the website testing and launch for the customer.",
+            "Since launch, I have implemented regular updates and recently added e-commerce functionality using WooCommerce.",
+            "I was keen to adopt a minimal plugin-dependency approach for this project - this ensures that there is 'less to go wrong' and also allowed me to delve further into the underlying PHP of Wordpress development. "
+        ]
+    }
+]

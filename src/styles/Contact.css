@@ -1,0 +1,147 @@
+.contact {
+    height: 100vh;
+    width: 100%;
+    background: rgb(114, 176, 228);
+    background: radial-gradient(circle, rgba(235, 249, 249, 0.445) 0%, rgba(111, 165, 226, 0.44) 100%);
+    overflow: hidden;
+    position: relative;
+    scroll-snap-align: start;
+    box-shadow: 4px 4px 100px rgba(111,
+        165,
+        226,
+        0.44);
+}
+
+.contactHeader {
+    position: absolute;
+    font-size: 15rem;
+    color: gray;
+    padding-right: 10vw;
+    opacity: 0;
+    right: 0;
+    width: fit-content;
+}
+
+.contactWrap {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 150px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.spacer {
+    height: 40%;
+    background: gray;
+    border-radius: 100px;
+    width: 4px;
+}
+
+.contactLinks {
+    margin-right: 5%;
+    width: 40%;
+    padding: 3% 2%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contactLinks h3 {
+    font-size: 2rem;
+}
+
+.contactLinks p {
+    font-size: 1.5rem;
+    margin-bottom: 10%;
+}
+
+.contactLinks div {
+    text-align: start;
+    width: fit-content;
+}
+
+.contactHeader span {
+    position: relative;
+    margin-right: 2px;
+}
+
+.contactHeader span::after {
+    position: absolute;
+    right: -8px;
+    color: rgb(16, 59, 151);
+    z-index: -1;
+    background-color: rgb(174, 238, 174);
+    background-image: radial-gradient(circle, rgb(152, 235, 152) 0%, rgba(3, 107, 226, 0.984) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.contactHeader span:nth-child(1)::after {
+    content: "C"
+}
+
+.contactHeader span:nth-child(2)::after {
+    content: "O"
+}
+
+.contactHeader span:nth-child(3)::after {
+    content: "N"
+}
+
+.contactHeader span:nth-child(4)::after {
+    content: "T"
+}
+
+.contactHeader span:nth-child(5)::after {
+    content: "A"
+}
+
+.contactHeader span:nth-child(6)::after {
+    content: "C"
+}
+
+.contactHeader span:nth-child(7)::after {
+    content: "T"
+}
+
+.contactHeader span:nth-child(9)::after {
+    content: "M"
+}
+
+.contactHeader span:nth-child(10)::after {
+    content: "E"
+}
+
+.contactLinks div .textWrap {
+    margin-left: 0;
+}
+
+.contactLinks div .textWrap {
+    display: grid;
+    width: fit-content;
+    height: fit-content;
+}
+
+.contactLinks div .textWrap .blockingDiv {
+    background-color: black;
+    z-index: 99;
+    grid-column: 1;
+    grid-row: 1;
+    width: 0;
+}
+
+.contactLinks .textWrap h2 {
+    font-size: 2rem;
+    color: black;
+    text-wrap: nowrap;
+    grid-column: 1;
+    grid-row: 1;
+    display: inline;
+}

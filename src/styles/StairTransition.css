@@ -1,0 +1,29 @@
+.transition-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    pointer-events: none;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.transition-container div {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    pointer-events: none;
+    background-color: black;
+}
