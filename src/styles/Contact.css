@@ -51,6 +51,7 @@
 
 .contactLinks h3 {
     font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 .contactLinks p {
@@ -61,6 +62,7 @@
 .contactLinks div {
     text-align: start;
     width: fit-content;
+    margin-bottom: 10px;
 }
 
 .contactHeader span {

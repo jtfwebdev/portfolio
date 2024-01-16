@@ -1,11 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useContext } from 'react';
 import '../styles/About.css';
 import { motion, useAnimate, useInView, stagger, AnimatePresence } from 'framer-motion';
 import BlockTextEnter from './BlockTextEnter';
 import ParticlesContainer from './ParticlesContainer';
 import Landing from './Landing';
+import { ScreenWidthContext } from '../App';
 
 const About = ({homeRef}) => {
+
+    const screenWidth = useContext(ScreenWidthContext);
 
     const particleDivStyles = [
         { top: "11vh" },
@@ -119,16 +122,18 @@ const About = ({homeRef}) => {
                 })}</motion.h2>
             </div>
             <div className="priorityTitleContainer">
-                <BlockTextEnter isInView={isInView} priorityFont={true}>Full Stack Web Developer</BlockTextEnter>
+                <BlockTextEnter isInView={isInView} priorityFont={true}>Full Stack{screenWidth < 520 && <br/>} Web Developer</BlockTextEnter>
             </div>
             <div className="aboutTextContainer">
                 <BlockTextEnter isInView={isInView}>Highly responsive UIs &#x2022; Seamless UXs</BlockTextEnter>
             </div>
+            {screenWidth > 999 && <>
             <ParticlesContainer style={particleDivStyles[0]} id={1} particleDensity={200} />
             <ParticlesContainer style={particleDivStyles[1]} id={2} particleDensity={200} />
             <ParticlesContainer style={particleDivStyles[2]} id={3} particleDensity={300} />
             <ParticlesContainer style={particleDivStyles[3]} id={4} particleDensity={250} />
             <ParticlesContainer style={particleDivStyles[4]} id={5} particleDensity={200} />
+            </>}
             <div className="bio_container">
                 <BlockTextEnter isInView={isInView}>I specialise in designing and developing full-stack websites and web apps, as well as deploying and maintaining code bases.</BlockTextEnter>
                 <BlockTextEnter isInView={isInView}>My main tech proficiences are listed below:</BlockTextEnter>

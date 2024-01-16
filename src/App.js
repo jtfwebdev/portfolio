@@ -1,9 +1,23 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState, createContext } from "react";
 import Homepage from "./components/Homepage";
 import StairTransition from "./components/StairTransition";
 import { useAnimate, stagger } from 'framer-motion';
 
+export const ScreenWidthContext = createContext(window.innerWidth);
+
 function App() {
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setScreenWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", updateScreenSize);
+
+    return () => window.removeEventListener("resize", updateScreenSize);
+  })
 
   const homeRef = useRef();
   const projectRef = useRef();
@@ -25,8 +39,10 @@ function App() {
 
   return (
     <div className="App">
+      <ScreenWidthContext.Provider value={screenWidth}>
       <StairTransition stairsScope={stairsScope} />
       <Homepage homeRef={homeRef} projectRef={projectRef} contactRef={contactRef} bioRef={bioRef} handleAnimateStairs={handleAnimateStairs} />
+      </ScreenWidthContext.Provider>
     </div>
   );
 }
