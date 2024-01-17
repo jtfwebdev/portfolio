@@ -81,3 +81,27 @@
     box-sizing: border-box;
     margin-top: -5px;
 }
+
+@media (max-width: 1049px) {
+    .bioText {
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    .bioText .textWrap h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 710px) {
+    .bioText .textWrap h2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .bioText .textWrap h2 {
+        font-size: 1rem;
+    }
+}

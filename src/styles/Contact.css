@@ -147,3 +147,31 @@
     grid-row: 1;
     display: inline;
 }
+
+@media (max-width: 1265px) {
+    .contactLinks {
+        width: 45%;
+    }
+}
+
+@media (max-width: 1140px) {
+    .contactLinks div .textWrap h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 1049px) {
+    .contactWrap {
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+    .contact {
+        height: fit-content;
+    }
+    .contactLinks {
+        width: 95%;
+    }
+    .contact {
+        padding-top: 60px;
+    }
+}

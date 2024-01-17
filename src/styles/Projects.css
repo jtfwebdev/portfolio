@@ -116,3 +116,9 @@
 .project_individ:last-of-type {
     margin-right: 0;
 }
+
+@media (max-width: 1049px) {
+    .projects {
+        padding-top: 60px;
+    }
+}

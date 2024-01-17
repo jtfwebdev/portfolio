@@ -13,7 +13,7 @@ const Homepage = ({homeRef, projectRef, contactRef, bioRef, handleAnimateStairs}
     
     return ( 
         <>
-            {screenWidth > 1049 && <SideNav homeRef={homeRef} projectRef={projectRef} contactRef={contactRef} bioRef={bioRef} handleAnimateStairs={handleAnimateStairs} />}
+            {screenWidth >= 1050 && <SideNav homeRef={homeRef} projectRef={projectRef} contactRef={contactRef} bioRef={bioRef} handleAnimateStairs={handleAnimateStairs} />}
             {screenWidth < 1050 && <MobileNav />}
             <About homeRef={homeRef} />
             <Bio bioRef={bioRef} />

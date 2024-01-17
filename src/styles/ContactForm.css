@@ -50,3 +50,15 @@
     margin-bottom: 5%;
     font-size: 2.5rem;
 }
+
+@media (max-width: 1265px) {
+    .form-wrapper {
+        width: 35%;
+    }
+}
+
+@media (max-width: 1049px) {
+    .form-wrapper {
+        width: 95%;
+    }
+}
