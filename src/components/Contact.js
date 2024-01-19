@@ -47,7 +47,7 @@ const Contact = ({contactRef}) => {
                     : screenWidth > 580 ? "6rem" : "5rem"
                 }`}}
             className="contactHeader"
-            >{title.map((char) => {return <span>{char}</span>})}</motion.h2>
+            >{title.map((char, idx) => {return <span key={idx}>{char}</span>})}</motion.h2>
             <motion.div 
                 className="contactWrap" 
                 ref={contactPanel}

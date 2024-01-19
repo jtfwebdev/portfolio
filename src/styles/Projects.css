@@ -125,6 +125,7 @@
 @media (max-width: 1200px) {
     .project_individ {
         width: 28%;
+        margin: 0 .5vw;
     }
 }
 
@@ -138,6 +139,7 @@
     }
     .project_individ {
         min-width: 50%;
+        margin: 0 1vw;
     }
     .projects {
         height: fit-content;

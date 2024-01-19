@@ -134,8 +134,8 @@ const MobileNav = ({homeRef, projectRef, contactRef, bioRef, handleAnimateStairs
                 animate="animate"
                 exit="exit">
                     <motion.div className="navLinksContainer" variants={linkContainerVariants} initial="initial" animate="open" exit="initial">
-                        {links.map((link) => {
-                            return <div>
+                        {links.map((link, idx) => {
+                            return <div key={idx}>
                                 <motion.div variants={navLinkVariants}>
                                     <button onClick={() => handleNavigate(link.target)}>{link.text}</button>
                                 </motion.div>

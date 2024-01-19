@@ -5,7 +5,7 @@ import BlockTextEnter from './BlockTextEnter';
 import ParticlesContainer from './ParticlesContainer';
 import { ScreenWidthContext } from '../App';
 
-const About = ({homeRef}) => {
+const About = ({homeRef, animateSidebar, sidebar}) => {
 
     const screenWidth = useContext(ScreenWidthContext);
 
@@ -30,7 +30,10 @@ const About = ({homeRef}) => {
         await animateHeader(aboutHeader.current, { opacity: .4 }, { duration: .3 });
         await animateTitleCont(titleCont.current, { width: 0, x: wrapRef.current.getBoundingClientRect().width }, { duration: .3 });
         setHasEntered(true);
-        await animateDevIcons("div", { opacity: 1, y: 0}, {duration: .2, delay: stagger(.1) });
+        animateDevIcons("div", { opacity: 1, y: 0}, {duration: .2, delay: stagger(.1) });
+        if (screenWidth >= 1050) {
+            animateSidebar(sidebar.current, { transformY: "-50%", right: 0, opacity: 1 }, { duration: 1 })
+        }
     }
 
     useEffect(() => {
@@ -95,8 +98,8 @@ const About = ({homeRef}) => {
                 <motion.div 
                 ref={titleCont} 
                 className="titleContainer"></motion.div>
-                <motion.h2 ref={aboutHeader}>{name.map((char) => {
-                    return <span>{char}</span>
+                <motion.h2 ref={aboutHeader}>{name.map((char, idx) => {
+                    return <span key={idx}>{char}</span>
                 })}</motion.h2>
             </div>
             <div className="priorityTitleContainer">
@@ -119,7 +122,7 @@ const About = ({homeRef}) => {
             <div className="devIcon_container" ref={devIcons}>
                 {devIconsList.map((devIcon, idx) => {
                     return (
-                        <motion.div initial={{ y: -100, opacity: 0 }}>
+                        <motion.div initial={{ y: -100, opacity: 0 }} key={idx}>
                             <motion.i onMouseEnter={() => setActiveTech(idx)}
                                 onMouseLeave={() => setActiveTech(null)}
                                 className={devIcon.target} key={idx}>

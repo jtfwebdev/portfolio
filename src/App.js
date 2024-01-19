@@ -29,6 +29,7 @@ function App() {
   }, []);
 
   const [stairsScope, animateStairs] = useAnimate();
+  const [sidebar, animateSidebar] = useAnimate();
 
   const handleAnimateStairs = async (target) => {
     await animateStairs("div", { height: "100%" }, { duration: 0.35, ease: [.42, 0, 1, .69], delay: stagger(0.05) });
@@ -41,7 +42,7 @@ function App() {
     <div className="App">
       <ScreenWidthContext.Provider value={screenWidth}>
       <StairTransition stairsScope={stairsScope} />
-      <Homepage homeRef={homeRef} projectRef={projectRef} contactRef={contactRef} bioRef={bioRef} handleAnimateStairs={handleAnimateStairs} />
+      <Homepage homeRef={homeRef} projectRef={projectRef} contactRef={contactRef} bioRef={bioRef} handleAnimateStairs={handleAnimateStairs} sidebar={sidebar} animateSidebar={animateSidebar} />
       </ScreenWidthContext.Provider>
     </div>
   );

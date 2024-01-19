@@ -1,6 +1,6 @@
 import '../styles/SideNav.css';
 
-const SideNav = ({homeRef, projectRef, contactRef, bioRef, handleAnimateStairs}) => {
+const SideNav = ({sidebar, homeRef, projectRef, contactRef, bioRef, handleAnimateStairs}) => {
 
     const handleNavigate = (target) => {
         if (target.current) {
@@ -9,7 +9,7 @@ const SideNav = ({homeRef, projectRef, contactRef, bioRef, handleAnimateStairs})
     }
 
     return ( 
-        <nav className="nav_container">
+        <nav className="nav_container" ref={sidebar}>
             <button onClick={() => handleNavigate(homeRef)}>
                 Home
             </button>

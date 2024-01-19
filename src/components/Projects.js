@@ -98,7 +98,7 @@ const Projects = ({projectRef}) => {
                 : screenWidth > 750 ? "8rem"
                 : screenWidth > 580 ? "6rem" : "5rem"
             }`}}
-            >{title.map((char) => {return <span>{char}</span>})}</motion.h2>
+            >{title.map((char, idx) => {return <span key={idx}>{char}</span>})}</motion.h2>
             <motion.div 
                 drag="x"
                 dragConstraints={{
@@ -122,7 +122,7 @@ const Projects = ({projectRef}) => {
                     onClick={() => !dragging && setActiveProject(1)}
                     whileHover="hover">
                         <motion.div variants={projectImg}
-                        style={{ background: `url(${MovieReviewBlogger})`, backgroundSize: "cover", backgroundPosition: "center center", height: "100%", width: "100%", borderRadius: "5px"}}
+                        style={{ background: `url(${MovieReviewBlogger})`, backgroundSize: "cover", backgroundPosition: "top center", height: "100%", width: "100%", borderRadius: "5px"}}
                         />
                         <motion.h2 variants={projectHeader}
                         style={{fontSize: "2rem", color: "white"}}
@@ -136,7 +136,7 @@ const Projects = ({projectRef}) => {
                     className="project_individ project_2"
                     onClick={() => !dragging && setActiveProject(2)}>
                         <motion.div variants={projectImg}
-                        style={{ backgroundImage: `url(${Conways})`, backgroundSize: "cover", backgroundPosition: "center center", height: "100%", width: "100%", borderRadius: "5px" }}
+                        style={{ backgroundImage: `url(${Conways})`, backgroundSize: "cover", backgroundPosition: "top center", height: "100%", width: "100%", borderRadius: "5px" }}
                         />
                         <motion.h2 variants={projectHeader}
                         style={{ fontSize: "2rem", color: "white" }}
@@ -149,7 +149,7 @@ const Projects = ({projectRef}) => {
                     className="project_individ project_3"
                     onClick={() => !dragging && setActiveProject(3)}>
                         <motion.div variants={projectImg}
-                        style={{ backgroundImage: `url(${MainStCafe})`, backgroundSize: "cover", backgroundPosition: "center center", height: "100%", width: "100%", borderRadius: "5px" }}
+                        style={{ backgroundImage: `url(${MainStCafe})`, backgroundSize: "cover", backgroundPosition: "top center", height: "100%", width: "100%", borderRadius: "5px" }}
                         />
                         <motion.h2 variants={projectHeader}
                         style={{ fontSize: "2rem", color: "white" }}

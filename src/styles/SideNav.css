@@ -5,18 +5,23 @@
     justify-content: space-between;
     width: fit-content;
     position: fixed;
-    right: 0;
+    right: -20vw;
+    opacity: 0;
     top: 50%;
     z-index: 99;
-    margin-right: 1%;
     height: 25vh;
     transform: translateY(-50%);
     color: gray;
+    padding: 1%;
+    backdrop-filter: blur(2px);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .nav_container button {
     background: none;
     border: none;
+    color: gray;
 }
 
 .nav_container button:hover {

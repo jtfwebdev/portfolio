@@ -11,8 +11,8 @@ const Bio = ({bioRef}) => {
         <motion.div className="bioContainer">
             <div className="braceWrap"><hr className="brace"></hr></div>
             <div className="bioText" ref={bioRef}>
-                {BioText[0].text.map((paragraph) => {
-                    return <BlockTextEnter isInView={isInView} delay={.5}>{paragraph}</BlockTextEnter>
+                {BioText[0].text.map((paragraph, idx) => {
+                    return <BlockTextEnter isInView={isInView} delay={.5} key={"bio" + idx}>{paragraph}</BlockTextEnter>
                 })}
             </div>
         </motion.div>

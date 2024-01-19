@@ -9,8 +9,8 @@ const StairTransition = ({stairsScope}) => {
             <div className="stairs">
                 <motion.div className="background" initial={{opacity: 0}}></motion.div>
                 <div className="transition-container" ref={stairsScope}>
-                    {[...Array(nbStairs)].map((stair, id) => {
-                        return <motion.div initial={{top: 0, height: 0}}>
+                    {[...Array(nbStairs)].map((stair, idx) => {
+                        return <motion.div initial={{top: 0, height: 0}} key={idx}>
 
                         </motion.div>
                     })}

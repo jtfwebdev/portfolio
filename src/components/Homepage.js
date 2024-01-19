@@ -7,15 +7,15 @@ import MobileNav from "./MobileNav";
 import { useContext } from "react";
 import { ScreenWidthContext } from '../App';
 
-const Homepage = ({homeRef, projectRef, contactRef, bioRef, handleAnimateStairs}) => {
+const Homepage = ({homeRef, projectRef, contactRef, bioRef, handleAnimateStairs, sidebar, animateSidebar}) => {
 
     const screenWidth = useContext(ScreenWidthContext);
     
     return ( 
         <>
-            {screenWidth >= 1050 && <SideNav homeRef={homeRef} projectRef={projectRef} contactRef={contactRef} bioRef={bioRef} handleAnimateStairs={handleAnimateStairs} />}
+            {screenWidth >= 1050 && <SideNav sidebar={sidebar} homeRef={homeRef} projectRef={projectRef} contactRef={contactRef} bioRef={bioRef} handleAnimateStairs={handleAnimateStairs} />}
             {screenWidth < 1050 && <MobileNav homeRef={homeRef} projectRef={projectRef} contactRef={contactRef} bioRef={bioRef} handleAnimateStairs={handleAnimateStairs} />}
-            <About homeRef={homeRef} />
+            <About homeRef={homeRef} animateSidebar={animateSidebar} sidebar={sidebar} />
             <Bio bioRef={bioRef} />
             <Projects projectRef={projectRef} />
             <Contact contactRef={contactRef} />
