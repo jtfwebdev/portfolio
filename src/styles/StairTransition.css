@@ -4,7 +4,7 @@
     height: 100vh;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 9999;
     pointer-events: none;
     display: flex;
     flex-direction: row-reverse;
@@ -23,7 +23,7 @@
     height: 100vh;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 9999;
     pointer-events: none;
     background-color: black;
 }

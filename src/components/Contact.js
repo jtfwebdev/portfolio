@@ -1,10 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import '../styles/Contact.css';
 import { motion, useAnimate, useInView } from 'framer-motion';
 import ContactForm from './ContactForm';
 import BlockTextEnter from './BlockTextEnter';
+import { ScreenWidthContext } from '../App';
 
 const Contact = ({contactRef}) => {
+
+    const screenWidth = useContext(ScreenWidthContext);
 
     const title = [
         "C", "O", "N", "T", "A", "C", "T", " ", "M", "E"
@@ -20,7 +23,7 @@ const Contact = ({contactRef}) => {
 
     const enterTitle = async () => {
         await animateHeader(header.current, { opacity: 0.3, x: 0 }, { duration: 1, ease: [0, 0.71, 0.2, 1.01], delay: .5 });
-        await animateHeader(header.current, { fontSize: "5rem", y: 30 }, { duration: .4 });
+        animateHeader(header.current, { fontSize: screenWidth < 580 ? "4rem" : "5rem", y: screenWidth > 750 ? 30 : 0 }, { duration: .4 });
         await animateContactPanel(contactPanel.current, { opacity: 1, rotateY: 0 }, { duration: 1 });
         await animateContactForm(contactForm.current, {opacity: 1, x: 0}, {duration: .5});
         await animateSpacer(spacer.current, {opacity: 1, y: 0}, {duration: .5});
@@ -35,7 +38,15 @@ const Contact = ({contactRef}) => {
 
     return ( 
         <section className="contact" ref={contactRef}>
-            <motion.h2 ref={header} initial={{fontSize: "15rem"}} className="contactHeader"
+            <motion.h2 ref={header}
+                initial={{
+                    fontSize: `${screenWidth > 1200 ? "15rem"
+                    : screenWidth > 1049 ? "12rem"
+                    : screenWidth > 950 ? "10rem"
+                    : screenWidth > 750 ? "8rem"
+                    : screenWidth > 580 ? "6rem" : "5rem"
+                }`}}
+            className="contactHeader"
             >{title.map((char) => {return <span>{char}</span>})}</motion.h2>
             <motion.div 
                 className="contactWrap" 

@@ -31,9 +31,9 @@ function App() {
   const [stairsScope, animateStairs] = useAnimate();
 
   const handleAnimateStairs = async (target) => {
-    await animateStairs("div", { height: "100%" }, { duration: 0.2, ease: [.42, 0, 1, .69], delay: stagger(0.05) });
+    await animateStairs("div", { height: "100%" }, { duration: 0.35, ease: [.42, 0, 1, .69], delay: stagger(0.05) });
     window.scrollTo({ top: target.current.offsetTop});
-    await animateStairs("div", { top: "100%" }, { duration: 0.2, ease: [.42, 0, 1, .69], delay: stagger(0.05) });
+    await animateStairs("div", { top: "100%" }, { duration: 0.35, ease: [.42, 0, 1, .69], delay: stagger(0.05) });
     animateStairs("div", { height: 0, top: 0 }, { duration: 0 });
   }
 

@@ -6,13 +6,14 @@
 }
 
 .projectContainer {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     overflow: hidden;
     background: white;
+    z-index: 1000;
 }
 
 .projectContainer .close_project {
@@ -61,13 +62,13 @@
 .projectWrap {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
 }
 
 .bg_column_1, .bg_column_2 {
     z-index: 99;
-    width: 15%;
+    width: 7.5%;
     height: 100%;
 }
 
@@ -100,7 +101,7 @@ background-image: linear-gradient(255deg,
 .projectHero {
     width: 100%;
     position: relative;
-    height: 58vh;
+    padding-bottom: 41.86%;
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -113,7 +114,6 @@ background-image: linear-gradient(255deg,
 .projectDescription {
     padding: 0 2%;
     width: 96%;
-    height: 42vh;
     font-size: 1.3rem;
     text-align: center;
     display: flex;
@@ -121,8 +121,19 @@ background-image: linear-gradient(255deg,
     align-items: center;
     justify-content: space-around;
     z-index: 99;
+    flex-grow: 1;
 }
 
 .projectDescription .textWrap {
     height: fit-content;
+}
+
+@media (max-width: 650px) {
+    .projectWrap {
+        width: 100%;
+    }
+    .projectContainer .close_project::after,
+    .projectContainer .close_project::before {
+        background-color: rgb(65, 68, 255);
+    }
 }

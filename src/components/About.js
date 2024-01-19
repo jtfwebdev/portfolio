@@ -3,7 +3,6 @@ import '../styles/About.css';
 import { motion, useAnimate, useInView, stagger, AnimatePresence } from 'framer-motion';
 import BlockTextEnter from './BlockTextEnter';
 import ParticlesContainer from './ParticlesContainer';
-import Landing from './Landing';
 import { ScreenWidthContext } from '../App';
 
 const About = ({homeRef}) => {
@@ -24,24 +23,11 @@ const About = ({homeRef}) => {
     const wrapRef = useRef();
     const [hasEntered, setHasEntered] = useState(false);
 
-    const [landingDiv1, animateLandingDiv1] = useAnimate();
-    const [landingDiv2, animateLandingDiv2] = useAnimate();
-    const [landingDiv3, animateLandingDiv3] = useAnimate();
-    const [landingDiv4, animateLandingDiv4] = useAnimate();
-    const [landingDiv5, animateLandingDiv5] = useAnimate();
-
     const [devIcons, animateDevIcons] = useAnimate();
 
-    const landingText = "Powered by React.js";
-
     const handleEnter = async () => {
-        await animateLandingDiv5(landingDiv5.current, { height: 0 }, { duration: .6, delay: 2.5 });
-        await animateLandingDiv4(landingDiv4.current, { height: 0 }, { duration: .5 });
-        await animateLandingDiv3(landingDiv3.current, { height: 0 }, { duration: .4 });
-        await animateLandingDiv2(landingDiv2.current, { height: 0 }, { duration: .3 });
-        await animateLandingDiv1(landingDiv1.current, { height: 0 }, { duration: .2 });
         await animateTitleCont(titleCont.current, { width: '100%' }, { duration: .3, delay: .5 });
-        await animateHeader(aboutHeader.current, { opacity: .4 }, { duration: .2 });
+        await animateHeader(aboutHeader.current, { opacity: .4 }, { duration: .3 });
         await animateTitleCont(titleCont.current, { width: 0, x: wrapRef.current.getBoundingClientRect().width }, { duration: .3 });
         setHasEntered(true);
         await animateDevIcons("div", { opacity: 1, y: 0}, {duration: .2, delay: stagger(.1) });
@@ -105,14 +91,6 @@ const About = ({homeRef}) => {
 
     return ( 
         <section className="aboutSection" ref={homeRef}>
-            <Landing 
-            landingDiv1={landingDiv1} 
-            landingDiv2={landingDiv2} 
-            landingDiv3={landingDiv3}
-            landingDiv4={landingDiv4}
-            landingDiv5={landingDiv5}
-            landingText={landingText}
-            />
             <div className="titleWrap" ref={wrapRef}>
                 <motion.div 
                 ref={titleCont} 
@@ -122,10 +100,10 @@ const About = ({homeRef}) => {
                 })}</motion.h2>
             </div>
             <div className="priorityTitleContainer">
-                <BlockTextEnter isInView={isInView} priorityFont={true}>Full Stack{screenWidth < 520 && <br/>} Web Developer</BlockTextEnter>
+                <BlockTextEnter isInView={isInView} delay={0.5} priorityFont={true}>Full Stack{screenWidth < 520 && <br/>} Web Developer</BlockTextEnter>
             </div>
             <div className="aboutTextContainer">
-                <BlockTextEnter isInView={isInView}>Highly responsive UIs &#x2022; Seamless UXs</BlockTextEnter>
+                <BlockTextEnter isInView={isInView} delay={0.5}>Highly responsive UIs &#x2022; Seamless UXs</BlockTextEnter>
             </div>
             {screenWidth > 999 && <>
             <ParticlesContainer style={particleDivStyles[0]} id={1} particleDensity={200} />
@@ -135,8 +113,8 @@ const About = ({homeRef}) => {
             <ParticlesContainer style={particleDivStyles[4]} id={5} particleDensity={200} />
             </>}
             <div className="bio_container">
-                <BlockTextEnter isInView={isInView}>I specialise in designing and developing full-stack websites and web apps, as well as deploying and maintaining code bases.</BlockTextEnter>
-                <BlockTextEnter isInView={isInView}>My main tech proficiences are listed below:</BlockTextEnter>
+                <BlockTextEnter isInView={isInView} delay={0.5}>I specialise in designing and developing full-stack websites and web apps, as well as deploying and maintaining code bases.</BlockTextEnter>
+                <BlockTextEnter isInView={isInView} delay={0.5}>My main tech proficiences are listed below:</BlockTextEnter>
             </div>
             <div className="devIcon_container" ref={devIcons}>
                 {devIconsList.map((devIcon, idx) => {

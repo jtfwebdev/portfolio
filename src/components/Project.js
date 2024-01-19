@@ -3,11 +3,14 @@ import { motion, useInView } from 'framer-motion';
 import HeroImage1 from '../images/MovieReviewBloggerFull.png';
 import HeroImage2 from '../images/ConwaysFull.png';
 import HeroImage3 from '../images/MainStCafeFull.png';
-import { useRef } from 'react';
+import { useRef, useContext } from 'react';
 import BlockTextEnter from './BlockTextEnter';
 import ProjectData from '../Projects.json';
+import { ScreenWidthContext } from '../App';
 
 const Project = ({setActiveProject, activeProject}) => {
+
+    const screenWidth = useContext(ScreenWidthContext);
 
     const textRef = useRef();
     const textIsInView = useInView(textRef, {once: false});
@@ -19,7 +22,7 @@ const Project = ({setActiveProject, activeProject}) => {
             transition={{duration: 0.7, ease: [0, 0.71, 0.2, 1.01]}}
             exit={{width: 0, height: 0}}
             className="projectContainer" ref={textRef}>
-                <div className="bg_column_1"></div>
+                {screenWidth > 650 && <div className="bg_column_1"></div>}
                 <motion.div
                 className="projectWrap"
                 initial={{opacity: 0}}
@@ -36,7 +39,7 @@ const Project = ({setActiveProject, activeProject}) => {
                     </div>
                     <motion.div className="close_project" onClick={() => setActiveProject(null)}></motion.div>
                 </motion.div>
-                <div className="bg_column_2"></div>
+                {screenWidth > 650 && <div className="bg_column_2"></div>}
             </motion.div>
      );
 }

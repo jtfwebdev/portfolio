@@ -101,7 +101,7 @@ const ParticlesContainer = ({style, id, particleDensity}) => {
         className="particleContainer"
         style={{top: style && style.top}}
         initial={{top: '200vh', opacity: 0}}
-        transition={{type: 'spring', duration: (1 + (0.2*id)), delay: 5}}
+        transition={{type: 'spring', duration: (1 + (0.2*id)), delay: 1}}
         animate={{top: style && style.top, opacity: 1}}
         >
             <Particles 

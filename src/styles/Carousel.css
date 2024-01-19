@@ -1,0 +1,18 @@
+.carousel_container {
+    position: relative;
+    min-height: 80vh;
+    overflow: hidden;
+    width: 80%;
+}
+
+.projects_wrap {
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    height: 80vh;
+    width: 100%;
+}
+
+.projectsWrap:active {
+    cursor: grabbing;
+}

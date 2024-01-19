@@ -14,7 +14,6 @@
 
 .contactHeader {
     position: absolute;
-    font-size: 15rem;
     color: gray;
     padding-right: 10vw;
     opacity: 0;
@@ -173,5 +172,11 @@
     }
     .contact {
         padding-top: 60px;
+    }
+}
+
+@media (max-width: 750px) {
+    .contactHeader span:after {
+        right: -5px;
     }
 }
