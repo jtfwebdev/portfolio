@@ -16,17 +16,14 @@
 }
 
 .styled-form {
-    display: grid;
-    gap: 15px;
-}
-
-.form-group {
     display: flex;
     flex-direction: column;
 }
 
 .input-label {
     margin-bottom: 5px;
+    width: fit-content;
+    display: inline;
 }
 
 .input,
@@ -35,6 +32,8 @@
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin-bottom: 10px;
+    resize: none;
 }
 
 .submit-button {
@@ -44,6 +43,12 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.popup-text {
+    color: red;
+    display: inline;
+    width: fit-content;
 }
 
 .form-group h3 {
