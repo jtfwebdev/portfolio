@@ -6,7 +6,6 @@
     position: relative;
     overflow: hidden;
     scroll-snap-align: start;
-    box-shadow: 4px 4px 100px rgba(111, 165, 226, 0.319);
 }
 
 .projects > h2 {

@@ -6,10 +6,6 @@
     overflow: hidden;
     position: relative;
     scroll-snap-align: start;
-    box-shadow: 4px 4px 100px rgba(111,
-        165,
-        226,
-        0.44);
 }
 
 .contactHeader {
@@ -48,13 +44,16 @@
     text-align: center;
 }
 
-.contactLinks h3 {
+.contactH3 {
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.contactLinks p {
+.contactp {
     font-size: 1.5rem;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
     margin-bottom: 10%;
 }
 
@@ -161,8 +160,9 @@
 
 @media (max-width: 1049px) {
     .contactWrap {
-        flex-direction: column-reverse;
+        flex-direction: column;
         height: fit-content;
+        margin-bottom: 20px;
     }
     .contact {
         height: fit-content;
@@ -173,10 +173,28 @@
     .contact {
         padding-top: 60px;
     }
+    .contactp {
+        margin-bottom: 0;
+    }
+    .contactH3 {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .contactHeader span::after {
+        right: -5px;
+    }
 }
 
 @media (max-width: 750px) {
-    .contactHeader span:after {
-        right: -5px;
+    .contactWrap {
+        margin-top: 120px;
+    }
+}
+
+@media (max-width: 580px) {
+    .contactWrap {
+        margin-top: 100px;
     }
 }

@@ -29,6 +29,7 @@
     cursor: pointer;
     transition-duration: .2s;
     z-index: 999;
+    mix-blend-mode: difference;
 }
 
 .projectContainer .close_project:hover {
@@ -40,7 +41,7 @@
     content: "";
     width: var(--bar-width);
     height: var(--bar-height);
-    background-color: white;
+    background-color: gray;
     outline: none;
     pointer-events: none;
     border-radius: 9999px;
@@ -131,9 +132,5 @@ background-image: linear-gradient(255deg,
 @media (max-width: 650px) {
     .projectWrap {
         width: 100%;
-    }
-    .projectContainer .close_project::after,
-    .projectContainer .close_project::before {
-        background-color: rgb(65, 68, 255);
     }
 }

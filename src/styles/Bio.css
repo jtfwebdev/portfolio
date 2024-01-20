@@ -4,7 +4,6 @@
     padding-top: 8vh;
     background: rgb(114, 176, 228);
     background: radial-gradient(circle, rgba(235, 249, 249, 0.185) 0%, rgba(111, 165, 226, 0.179) 100%);
-    box-shadow: 4px 4px 100px rgba(111, 165, 226, 0.267);
 }
 
 .bioContainer .bioText .textWrap {

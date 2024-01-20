@@ -40,8 +40,8 @@ const Contact = ({contactRef}) => {
         <section className="contact" ref={contactRef}>
             <motion.h2 ref={header}
                 initial={{
-                    fontSize: `${screenWidth > 1200 ? "15rem"
-                    : screenWidth > 1049 ? "12rem"
+                    fontSize: `${screenWidth > 1200 ? "13rem"
+                    : screenWidth > 1049 ? "11rem"
                     : screenWidth > 950 ? "10rem"
                     : screenWidth > 750 ? "8rem"
                     : screenWidth > 580 ? "6rem" : "5rem"
@@ -53,11 +53,17 @@ const Contact = ({contactRef}) => {
                 ref={contactPanel}
                 initial={{opacity: 0, rotateY: -50}}
                 >
+                {screenWidth < 1050 && <>
+                    <h3 className="contactH3">Want to discuss a project?</h3>
+                    <p className="contactp">Send me a message here, or contact me via the links below.</p>
+                </>}
                 <ContactForm contactForm={contactForm} />
                 <motion.div className="spacer" ref={spacer} initial={{opacity: 0, y: -100}}></motion.div>
                 <div className="contactLinks" ref={contactLinks}>
-                    <h3>Want to discuss a project?</h3>
-                    <p>Send me a message here, or contact me via the links below.</p>
+                    {screenWidth >= 1050 && <>
+                        <h3 className="contactH3">Want to discuss a project?</h3>
+                        <p className="contactp">Send me a message here, or contact me via the links below.</p>
+                    </>}
                     <div>
                         <label>Email</label>
                         <BlockTextEnter isInView={isInView} delay={3.5}>jtfwebdevconsultant@hotmail.com</BlockTextEnter>
