@@ -66,15 +66,15 @@ const Contact = ({contactRef}) => {
                     </>}
                     <div>
                         <label>Email</label>
-                        <BlockTextEnter isInView={isInView} delay={3.5}>jtfwebdevconsultant@hotmail.com</BlockTextEnter>
+                        <BlockTextEnter isInView={isInView} delay={3.5} link={true} target="mailto:jtfwebdevconsultant@hotmail.com?subject=Website%20Development%20Query">jtfwebdevconsultant@hotmail.com</BlockTextEnter>
                     </div>
                     <div>
                         <label>Github</label>
-                        <BlockTextEnter isInView={isInView} delay={3.5}>https://github.com/jtfwebdev</BlockTextEnter>
+                        <BlockTextEnter isInView={isInView} delay={3.5} link={true} target="https://github.com/jtfwebdev">github.com/jtfwebdev</BlockTextEnter>
                     </div>
                     <div>
                         <label>linkedIn</label>
-                        <BlockTextEnter isInView={isInView} delay={3.5}>joshy@linkedIn.com</BlockTextEnter>
+                        <BlockTextEnter isInView={isInView} delay={3.5} link={true} target="https://www.linkedin.com/in/josh-ford-a950452b0/">linkedin.com/josh-ford</BlockTextEnter>
                     </div>
                 </div>
             </motion.div>

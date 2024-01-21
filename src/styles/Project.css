@@ -63,13 +63,12 @@
 .projectWrap {
     display: flex;
     flex-direction: column;
-    width: 85%;
-    margin: 0 auto;
+    width: 75%;
 }
 
 .bg_column_1, .bg_column_2 {
     z-index: 99;
-    width: 7.5%;
+    width: 12.5%;
     height: 100%;
 }
 

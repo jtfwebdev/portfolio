@@ -1,7 +1,7 @@
 import { motion, useAnimate } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
-const BlockTextEnter = ({children, isInView, priorityFont, delay}) => {
+const BlockTextEnter = ({children, isInView, priorityFont, delay, link, target}) => {
 
     const [blockDivRef, animateBlockDivRef] = useAnimate();
     const [text, animateText] = useAnimate();
@@ -27,9 +27,12 @@ const BlockTextEnter = ({children, isInView, priorityFont, delay}) => {
             ref={blockDivRef}
             >
             </motion.div>
-            <motion.h2 className={priorityFont ? "priorityFont" : ""} ref={text}>
+            {!link && <motion.h2 className={priorityFont ? "priorityFont" : ""} ref={text}>
                 {children}
-            </motion.h2>
+            </motion.h2>}
+            {link && <motion.a href={target} target="_blank" className={priorityFont ? "priorityFont" : ""} ref={text}>
+                {children}
+            </motion.a>}
         </div>
      );
 }

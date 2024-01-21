@@ -135,9 +135,10 @@
     grid-column: 1;
     grid-row: 1;
     width: 0;
+    height: 100%;
 }
 
-.contactLinks .textWrap h2 {
+.contactLinks .textWrap h2, .contactLinks .textWrap a {
     font-size: 2rem;
     color: black;
     text-wrap: nowrap;
@@ -190,6 +191,12 @@
 @media (max-width: 750px) {
     .contactWrap {
         margin-top: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contactWrap {
+        width: 95%;
     }
 }
 

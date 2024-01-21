@@ -100,7 +100,7 @@
     width: fit-content;
 }
 
-.textWrap h2 {
+.textWrap h2, .textWrap a {
     opacity: 0;
 }
 

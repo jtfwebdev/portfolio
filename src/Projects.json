@@ -3,20 +3,20 @@
         "id": "1",
         "target": "https://moviereviewblogger.co.uk/",
         "text": [
-            "My personal take on the obligatory Movie API project.",
+            "My personal take on the obligatory Movie API project, inspired by such apps as Letterboxd.",
+            "Users are able to create an account and securely log in, view the Movie of the Week and leave their review for others to see. Authentication is supplied by JWT and incorporates end-to-end encryption.",
             "This is a full-stack MERN application (mongoDB, Express, React, node.js).",
-            "Users are able to create an account and securely log in, view the Movie of the Week and leave their review for others to see.",
-            "API calls are minimised by use of a scheduled job in the backend, whereby data is fetched only once per day and used to update the movies list.",
-            "Authentication is provided via JSON web tokens, as is a fully-functional password-reset system."
+            "API calls are minimised by use of a scheduled job in the backend, whereby data is fetched only once per day and used to update the movies list."
         ]
     },
     {
         "id": "2",
-        "target": "",
+        "target": "https://conwaysapp.co.uk/",
         "text": [
-            "Conway's Game of Life is a single-player game that studies cellular propagation.",
+            "Conway's Game of Life is a single-player game that visualises cellular propagation.",
             "This project is coded in Typescript and React, and was initialised using Vite.",
-            "The animation is painted onto a canvas and undergoes generational 'ticks'. Second- and third-order loops calculate the binary condition of each cell.",
+            "The animation is painted onto a canvas and undergoes generational 'ticks'. Second- and third-order loops calculate the binary condition of each cell and update the canvas.",
+            "The user can select from a list of preset configurations, or create their own by interacting with the canvas.",
             "A certain amount of balancing was required for this application - canvas size, cell population constraints and limits on the tick duration were necessary to ensure reasonable performance in the browser."
         ]
     },

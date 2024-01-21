@@ -2,9 +2,10 @@
     {
         "text" : [
             "My journey in web development began in 2022 when I began studying HTML, CSS and Javascript. Once I had grasped the basics, I transitioned to a React-based workflow.",
-            "React appealed to me due to its highly-structured yet robust nature and the ease with which highly-responsive UIs can be generated.",
-            "After creating a few front-end projects in React, I ventured into full-stack territory with MERN (MongoDB, Express, React and node.js). My MovieReviewBlogger project showcases my proficiency in these technologies.",
-            "Aside from React, I have also taken on some freelance work as a Wordpress developer, with proficiencies in PHP and custom theme/plugin development."
+            "While working with React, I familiarised myself with concepts such as VDOM manipulation, component re-usability, state management, memoisation and DRY coding.",
+            "After creating a few front-end projects in React, I ventured into full-stack territory with MERN (MongoDB, Express, React and node.js). Here, I learned more advanced back-end concepts such as authentication, encryption and RESTful API management.",
+            "Aside from React, I have also taken on some freelance work as a Wordpress developer, with proficiencies in PHP and custom theme/plugin development.",
+            "I am currently in the process of learning C# and ASP.NET as an augmentation of my back-end development capabilities."
         ]
     }
 ]
