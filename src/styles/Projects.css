@@ -141,6 +141,8 @@
         margin: 0 1vw;
     }
     .projects {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
     }
     .carousel_dots_container {

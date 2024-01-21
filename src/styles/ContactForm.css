@@ -22,6 +22,8 @@
 
 .input-label {
     margin-bottom: 5px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     display: inline;
 }
@@ -48,6 +50,8 @@
 .popup-text {
     color: red;
     display: inline;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 

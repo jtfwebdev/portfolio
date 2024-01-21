@@ -3,6 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     position: fixed;
     right: -20vw;
@@ -13,7 +15,8 @@
     transform: translateY(-50%);
     color: gray;
     padding: 1%;
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }

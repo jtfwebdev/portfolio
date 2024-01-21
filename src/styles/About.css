@@ -9,7 +9,11 @@
 
 .aboutSection .titleWrap {
     display: grid;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -36,6 +40,8 @@
 .aboutTextContainer {
     margin-left: 4vw;
     margin-top: 70px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -43,7 +49,11 @@
 .projectDescription .textWrap,
 .bioText .textWrap {
     display: grid;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -97,6 +107,8 @@
 
 .priorityTitleContainer {
     margin-top: 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -169,7 +181,8 @@
 .particleContainer {
     height: 7vw;
     width: 7vw;
-    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+            clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
     position: absolute;
     right: 15vw;
     overflow: hidden;

@@ -6,7 +6,8 @@
 }
 
 html {
-  scroll-snap-type: y proximity;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
   background:
       radial-gradient(rgba(0, 0, 0, 0.1) 15%, transparent 16%) 0 0,
       radial-gradient(rgba(0, 0, 0, 0.071) 15%, transparent 16%) 8px 8px,

@@ -8,11 +8,13 @@
 .projects_wrap {
     display: flex;
     align-items: center;
+    cursor: -webkit-grab;
     cursor: grab;
     height: 80vh;
     width: 100%;
 }
 
 .projectsWrap:active {
+    cursor: -webkit-grabbing;
     cursor: grabbing;
 }
