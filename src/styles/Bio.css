@@ -1,9 +1,8 @@
 .bioContainer {
     width: 100%;
-    scroll-snap-align: center;
-    padding-top: 8vh;
-    background: rgb(114, 176, 228);
-    background: radial-gradient(circle, rgba(235, 249, 249, 0.185) 0%, rgba(111, 165, 226, 0.179) 100%);
+    padding-top: 5vh;
+    background: transparent;
+    height: 100vh;
 }
 
 .bioContainer .bioText .textWrap {

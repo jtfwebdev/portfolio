@@ -8,9 +8,9 @@ const Bio = ({bioRef}) => {
     const isInView = useInView(bioRef, {once: true, amount: 0.3});
 
     return (
-        <motion.div className="bioContainer">
+        <motion.div className="bioContainer" ref={bioRef}>
             <div className="braceWrap"><hr className="brace"></hr></div>
-            <div className="bioText" ref={bioRef}>
+            <div className="bioText">
                 {BioText[0].text.map((paragraph, idx) => {
                     return <BlockTextEnter isInView={isInView} delay={.5} key={"bio" + idx}>{paragraph}</BlockTextEnter>
                 })}

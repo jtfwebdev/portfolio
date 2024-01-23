@@ -6,6 +6,8 @@ import MovieReviewBlogger from '../images/MovieReviewBlogger.jpg';
 import MainStCafe from '../images/MainStCafe.png';
 import Conways from '../images/Conways.png';
 import { ScreenWidthContext } from '../App';
+import FullScreenProjectSlide from './FullScreenProjectSlide';
+import MobileProjectSlide from './MobileProjectSlide';
 
 const Projects = ({projectRef}) => {
 
@@ -68,24 +70,31 @@ const Projects = ({projectRef}) => {
         }
     }
 
-    //whileHover variants for project cards
-
-    const projectParent = {
-        hover: {
-
+    const projects = [
+        {
+            id: 1,
+            ref: project1,
+            image: MovieReviewBlogger,
+            title: ["Movie", "Review", "Blogger"]
+        },
+        {
+            id: 2,
+            ref: project2,
+            image: Conways,
+            title: ["Conway's", "Game", "of", "Life"]
+        },
+        {
+            id: 3,
+            ref: project3,
+            image: MainStCafe,
+            title: ["Main", "St.", "Cafe"]
         }
-    }
+    ]
 
-    const projectImg = {
-        hover: {
-            filter: "brightness(30%)"
-        }
-    }
-
-    const projectHeader = {
-        hover: {
-            fontSize: "5rem"
-        }
+    const projectParams = {
+        dragging, 
+        setActiveProject, 
+        activeProject
     }
 
     return ( 
@@ -116,46 +125,12 @@ const Projects = ({projectRef}) => {
                 onDragEnd={onDragEnd}
                 className="projectsContainer"
                 >
-                <motion.div ref={project1} variants={projectParent}
-                    initial={{ opacity: 0, x: -200 }}
-                    className="project_individ project_1"
-                    onClick={() => !dragging && setActiveProject(1)}
-                    whileHover="hover">
-                        <motion.div variants={projectImg}
-                        style={{ background: `url(${MovieReviewBlogger})`, backgroundSize: "cover", backgroundPosition: "top center", height: "100%", width: "100%", borderRadius: "5px"}}
-                        />
-                        <motion.h2 variants={projectHeader}
-                        style={{fontSize: "2rem", color: "white"}}
-                        transition={{ duration: 0.4, ease: [0, 0.71, 0.2, 1.01], delay: activeProject ? 1 : 0 }}
-                        //transition={SPRING_TRANSITION}
-                        >Movie<br/>Review<br/>Blogger</motion.h2>
-                </motion.div>
-                <motion.div ref={project2} variants={projectParent}
-                    initial={{ opacity: 0, x: -200 }}
-                    whileHover="hover"
-                    className="project_individ project_2"
-                    onClick={() => !dragging && setActiveProject(2)}>
-                        <motion.div variants={projectImg}
-                        style={{ backgroundImage: `url(${Conways})`, backgroundSize: "cover", backgroundPosition: "top center", height: "100%", width: "100%", borderRadius: "5px" }}
-                        />
-                        <motion.h2 variants={projectHeader}
-                        style={{ fontSize: "2rem", color: "white" }}
-                        transition={{ duration: 0.4, ease: [0, 0.71, 0.2, 1.01], delay: activeProject ? 1 : 0 }}
-                        >Conway's<br/>Game<br/>of<br/>Life</motion.h2>
-                </motion.div>
-                <motion.div ref={project3} variants={projectParent}
-                    initial={{ opacity: 0, x: -200 }}
-                    whileHover="hover"
-                    className="project_individ project_3"
-                    onClick={() => !dragging && setActiveProject(3)}>
-                        <motion.div variants={projectImg}
-                        style={{ backgroundImage: `url(${MainStCafe})`, backgroundSize: "cover", backgroundPosition: "top center", height: "100%", width: "100%", borderRadius: "5px" }}
-                        />
-                        <motion.h2 variants={projectHeader}
-                        style={{ fontSize: "2rem", color: "white" }}
-                        transition={{ duration: 0.4, ease: [0, 0.71, 0.2, 1.01], delay: activeProject ? 1 : 0 }}
-                        >Main<br/>St.<br/>Cafe</motion.h2>
-                </motion.div>
+                {screenWidth > 768 && projects.map((project, idx) => {
+                    return <FullScreenProjectSlide key={idx} project={project.ref} heroImg={project.image} id={project.id} title={project.title} params={projectParams} />
+                })}
+                {screenWidth <= 768 && projects.map((project, idx) => {
+                    return <MobileProjectSlide key={idx} project={project.ref} heroImg={project.image} id={project.id} title={project.title} params={projectParams} />
+                })}
             </motion.div>
             {screenWidth < 1050 && <motion.div className="carousel_dots_container">
                 {[...new Array(numOfProjects)].map((_, idx) => {

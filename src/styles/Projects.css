@@ -2,10 +2,9 @@
     height: 100vh;
     width: 100%;
     background: rgb(114, 176, 228);
-    background: radial-gradient(circle, rgba(235, 249, 249, 0.314) 0%, rgba(111, 165, 226, 0.319) 100%);
+    background: transparent;
     position: relative;
     overflow: hidden;
-    scroll-snap-align: start;
 }
 
 .projects > h2 {
@@ -93,6 +92,14 @@
 
 .project_individ:hover {
     cursor: pointer;
+}
+
+.project_individ div {
+    background-size: cover;
+    background-position: top center;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
 }
 
 .project_individ h2 {
