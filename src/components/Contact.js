@@ -26,7 +26,7 @@ const Contact = ({contactRef}) => {
         animateHeader(header.current, { fontSize: screenWidth < 580 ? "4rem" : "5rem", y: screenWidth > 750 ? 30 : 0 }, { duration: .4 });
         await animateContactPanel(contactPanel.current, { opacity: 1, rotateY: 0 }, { duration: 1 });
         await animateContactForm(contactForm.current, {opacity: 1, x: 0}, {duration: .5});
-        await animateSpacer(spacer.current, {opacity: 1, y: 0}, {duration: .5});
+        await animateSpacer(spacer.current, {opacity: 1}, {duration: .5});
     }
 
     useEffect(() => {
@@ -58,7 +58,7 @@ const Contact = ({contactRef}) => {
                     <p className="contactp">Send me a message here, or contact me via the links below.</p>
                 </>}
                 <ContactForm contactForm={contactForm} />
-                <motion.div className="spacer" ref={spacer} initial={{opacity: 0, y: -100}}></motion.div>
+                <motion.div className="spacer" ref={spacer} initial={{opacity: 0}}></motion.div>
                 <div className="contactLinks" ref={contactLinks}>
                     {screenWidth >= 1050 && <>
                         <h3 className="contactH3">Want to discuss a project?</h3>

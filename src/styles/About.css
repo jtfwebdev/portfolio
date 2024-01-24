@@ -1,9 +1,11 @@
 .aboutSection {
-    height: 85vh;
+    height: 100vh;
     width: 100%;
     position: relative;
-    padding-top: 15vh;
     background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .aboutSection .titleWrap {
@@ -14,6 +16,7 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    margin-bottom: -8vh;
 }
 
 .aboutSection .titleWrap h2, .priorityTitleContainer h2 {
@@ -38,7 +41,6 @@
 
 .aboutTextContainer {
     margin-left: 4vw;
-    margin-top: 70px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -105,7 +107,6 @@
 }
 
 .priorityTitleContainer {
-    margin-top: 10px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -128,7 +129,6 @@
 
 .bio_container {
     margin-left: 4vw;
-    margin-top: 20px;
 }
 
 .bio_container .textWrap h2 {
@@ -143,7 +143,6 @@
 .devIcon_container {
     width: 65%;
     margin-left: 4vw;
-    margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -252,9 +251,6 @@
     .bio_container .textWrap h2 {
         text-wrap: wrap
     }
-    .aboutTextContainer {
-        margin-top: 30px;
-    }
 }
 
 @media (max-width: 1150px) {
@@ -271,7 +267,11 @@
 
 @media (max-width: 1050px) {
     .particleContainer {
-        right: 5vw;
+        right: 8vw;
+    }
+    .aboutSection {
+        height: calc(100vh - 60px);
+        padding-top: 60px;
     }
 }
 
@@ -310,6 +310,9 @@
     }
     .devIcon_container i {
         font-size: 50px;
+    }
+    .aboutSection .titleWrap {
+        margin-bottom: -5vh;
     }
 }
 
@@ -364,5 +367,17 @@
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         row-gap: 55px;
         width: 90%;
+    }
+    .aboutSection .titleWrap {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .devIcon_container i {
+        font-size: 40px;
+    }
+    .devIcon_container i p {
+        font-size: 1rem;
     }
 }

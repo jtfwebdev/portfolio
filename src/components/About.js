@@ -128,15 +128,15 @@ const About = ({homeRef, animateSidebar, sidebar}) => {
                                 className={devIcon.target} key={idx}>
                                 <AnimatePresence>
                                     {activeTech == idx && <motion.p 
-                                        initial={{x: "50%", y: "-130%", opacity: 0}}
+                                        initial={{x: "50%", y: screenWidth > 850 ? "-130%" : "-200%", opacity: 0}}
                                         transition={{duration: 0.3, ease: [0, 0.71, 0.2, 1.01], y: {
                                             type: "spring",
                                             damping: 10,
                                             mass: 1,
                                             stiffness: 100,
                                         }}}
-                                        animate={{y: "-80%", opacity: 1}}
-                                        exit={{y: "-200%", opacity: 0}}>{devIcon.text}</motion.p>}
+                                        animate={{y: screenWidth > 850 ? "-80%" : "-140%", opacity: 1}}
+                                        exit={{y: screenWidth > 850 ? "-130%" : "-200%", opacity: 0}}>{devIcon.text}</motion.p>}
                                 </AnimatePresence>
                             </motion.i>
                         </motion.div>
